@@ -1,0 +1,12 @@
+# Restart xochitl
+
+[Unit]
+Description=Restart xochitl
+Wants=daily.timer
+
+[Service]
+Type=oneshot
+ExecStart=systemctl restart xochitl
+
+[Install]
+WantedBy=multi-user.target
